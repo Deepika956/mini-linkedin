@@ -22,7 +22,7 @@ export default function Profile() {
 
   const fetchUserData = async (userId) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/users/${userId}`);
+      const res = await fetch(`https://mini-linkedin-w94t.onrender.com/api/users/${userId}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to load user data");
 
@@ -54,7 +54,7 @@ export default function Profile() {
   const saveToDatabase = async (updatedUserData) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/users/update/${updatedUserData._id}`,
+        `https://mini-linkedin-w94t.onrender.com/api/users/update/${updatedUserData._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -97,8 +97,8 @@ export default function Profile() {
 
     const endpoint =
       type === "banner"
-        ? "http://localhost:5000/api/users/upload/banner"
-        : "http://localhost:5000/api/users/upload/profile";
+        ? "https://mini-linkedin-w94t.onrender.com/api/users/upload/banner"
+        : "https://mini-linkedin-w94t.onrender.com/api/users/upload/profile";
 
     const res = await fetch(endpoint, {
       method: "POST",
@@ -275,3 +275,4 @@ export default function Profile() {
     </div>
   );
 }
+
