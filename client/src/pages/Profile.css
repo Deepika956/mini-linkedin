@@ -1,0 +1,278 @@
+.profile-page {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.profile-main {
+  flex: 3;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container {
+  position: relative;
+  height: 200px;
+  background-color: #ccc;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: -50px;
+  left: 2rem;
+  border: 3px solid white;
+}
+
+.user-info {
+  padding: 3rem 2rem 2rem;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.pronoun {
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.bio,
+.location,
+.email,
+.connections {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.action-buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.open-to-work {
+  margin-top: 1rem;
+  background: #e7f3ff;
+  padding: 0.7rem;
+  border-left: 4px solid #0a66c2;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.edit-banner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.edit-profile-pic {
+  position: absolute;
+  bottom: -5px;
+  left: 110px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.editable-field-rect {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.rect-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.save-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  padding: 6px 16px;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #004182;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+}
+
+.edit-btn:hover {
+  transform: scale(1.2);
+}
+.editable-field{
+  display: flex;
+  align-items: center;
+}
+textarea,.loc{
+  width: 80%;
+  height:30px;
+  margin-left: 10px;
+  padding: 1px;
+  resize: none;
+  border: 1px solid gray;
+  outline: none;
+  margin-bottom: 10px;
+
+}
+.logout-card{
+background-color: #f83f3fd2;
+}
+.logout-button{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+.user-posts-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.user-posts-section h3 {
+  margin-bottom: 1rem;
+}
+
+.user-post {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-post img.post-image {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+.user-posts-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.section-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.no-posts-text {
+  font-style: italic;
+  color: #777;
+}
+
+.user-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.user-post-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.user-post-card:hover {
+  transform: scale(1.01);
+}
+
+.post-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+.post-text {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.post-image-preview {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
+  object-fit: cover;
+  max-height: 200px;
+}
