@@ -59,7 +59,7 @@ export default function PostModal({ onClose, onPostSuccess }) {
         const formData = new FormData();
         formData.append("image", image);
 
-        const res = await fetch("http://localhost:5000/api/posts/upload", {
+        const res = await fetch("https://mini-linkedin-w94t.onrender.com/api/posts/upload", {
           method: "POST",
           body: formData,
         });
@@ -69,7 +69,7 @@ export default function PostModal({ onClose, onPostSuccess }) {
         imageUrl = `http://localhost:5000${data.imageUrl}`;
       }
 
-      const res = await fetch("http://localhost:5000/api/posts", {
+      const res = await fetch("https://mini-linkedin-w94t.onrender.com/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -143,3 +143,4 @@ export default function PostModal({ onClose, onPostSuccess }) {
     </div>
   );
 }
+
