@@ -46,7 +46,7 @@ export default function PostSection() {
 
   const fetchPosts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/posts");
+      const res = await fetch("https://mini-linkedin-w94t.onrender.com/api/posts");
       const data = await res.json();
       if (!res.ok || !Array.isArray(data) || data.length === 0) {
         throw new Error("Invalid or empty post data");
@@ -118,3 +118,4 @@ export default function PostSection() {
     </div>
   );
 }
+
