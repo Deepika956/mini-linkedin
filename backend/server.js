@@ -1,4 +1,4 @@
-const express = require('express');
+,const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -14,7 +14,7 @@ const app = express();
 // ✅ Middleware
 app.use(cors({
   origin: ['http://localhost:3000',
-  'https://mini-linkedin-1-qq8q.onrender.com']
+  'https://mini-linkedin-1-qq8q.onrender.com'],
   credentials: true,
 }));
 app.use(express.json());
@@ -38,4 +38,5 @@ mongoose.connect(process.env.MONGO_URI, {
 // ✅ Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
